@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8BC1A7BB2FC4DA62002F6189 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 8BC1A7BA2FC4DA62002F6189 /* Common */; };
+		8BC1A7BF2FC4DA62002F6189 /* GraphQLClient in Frameworks */ = {isa = PBXBuildFile; productRef = 8BC1A7BE2FC4DA62002F6189 /* GraphQLClient */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8BC1A7812FC38D20002F6189 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -53,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC1A7BB2FC4DA62002F6189 /* Common in Frameworks */,
+				8BC1A7BF2FC4DA62002F6189 /* GraphQLClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +87,7 @@
 				8BC1A7752FC38D1F002F6189 /* RocketHub */,
 				8BC1A7832FC38D20002F6189 /* RocketHubTests */,
 				8BC1A78D2FC38D20002F6189 /* RocketHubUITests */,
+				8BC1A7B92FC4DA62002F6189 /* Frameworks */,
 				8BC1A7742FC38D1F002F6189 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +100,13 @@
 				8BC1A78A2FC38D20002F6189 /* RocketHubUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8BC1A7B92FC4DA62002F6189 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +129,8 @@
 			);
 			name = RocketHub;
 			packageProductDependencies = (
+				8BC1A7BA2FC4DA62002F6189 /* Common */,
+				8BC1A7BE2FC4DA62002F6189 /* GraphQLClient */,
 			);
 			productName = RocketHub;
 			productReference = 8BC1A7732FC38D1F002F6189 /* RocketHub.app */;
@@ -617,6 +634,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8BC1A7BA2FC4DA62002F6189 /* Common */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Common;
+		};
+		8BC1A7BE2FC4DA62002F6189 /* GraphQLClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GraphQLClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8BC1A76B2FC38D1F002F6189 /* Project object */;
 }

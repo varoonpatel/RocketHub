@@ -17,8 +17,8 @@ let package = Package(
             targets: ["GraphQLClient"]
         ),
         .library(
-            name: "GraphQLAPI",
-            targets: ["GraphQLAPI"]
+            name: "RocketAPI",
+            targets: ["RocketAPI"]
         ),
     ],
     dependencies: [
@@ -34,15 +34,17 @@ let package = Package(
         .target(
             name: "GraphQLClient",
             dependencies: [
+                "RocketAPI",
                 .product(name: "FactoryKit", package: "Factory"),
                 .product(name: "Apollo", package: "apollo-ios"),
             ]
         ),
         .target(
-            name: "GraphQLAPI",
+            name: "RocketAPI",
             dependencies: [
                 .product(name: "Apollo", package: "apollo-ios"),
-            ]
+            ],
+            path: "Sources/RocketAPI/RocketAPI/Sources"
         )
     ],
     swiftLanguageModes: [.v6]
