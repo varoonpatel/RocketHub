@@ -7,8 +7,8 @@
 
 import FactoryKit
 
-extension Container {
-    public var graphQLClient: Factory<GraphQLClient> {
+public extension Container {
+    var graphQLClient: Factory<GraphQLClient> {
         self {
             fatalError("GraphQLCLient is not registered")
         }

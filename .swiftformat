@@ -1,0 +1,3 @@
+--swiftversion 6.0
+--exclude Modules/Sources/RocketAPI/Generated
+--exclude Modules/.build

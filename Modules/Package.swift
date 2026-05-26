@@ -24,7 +24,8 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/hmlongco/Factory", from: "3.0.4"),
         .package(url: "https://github.com/apollographql/apollo-ios", exact: "2.1.2"),
-        .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", exact: "0.63.2")
+        .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", exact: "0.63.2"),
+        .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.61.1")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
