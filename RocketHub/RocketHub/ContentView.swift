@@ -5,14 +5,16 @@
 //  Created by Varun on 2026-05-24.
 //
 
-import RocketAPI
+import Common
 import FactoryKit
-import SwiftUI
 import GraphQLClient
+import RocketAPI
+import SwiftUI
 
 struct ContentView: View {
     @Injected(\.graphQLClient) var graphQLClient: any GraphQLClient
-    
+    @Injected(\.logger) var logger: any Logging
+
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,13 +22,8 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text("Hello, world!")
         }
-        .task {
-            do {
-                let user = try await graphQLClient.perform(mutation: LoginMutation(email: "test@test.com"))
-                print("User: \(user)")
-            } catch {
-                print("Error \(error.localizedDescription)")
-            }
+        .onAppear {
+            logger.log("ContentView", level: .debug)
         }
         .padding()
     }

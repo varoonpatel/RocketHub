@@ -3,4 +3,22 @@
    uuid = "BDA3744D-B3BA-4C28-AFB7-0D4D79F2F0F3"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8463DC1-808A-4BF8-BBA0-9C0F476B91E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../Library/Developer/Xcode/DerivedData/RocketHub-afgigbwcnnmnesefxewkkaeqacwr/SourcePackages/checkouts/apollo-ios/Sources/Apollo/ApolloClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "452"
+            endingLineNumber = "452"
+            landmarkName = "perform(mutation:requestConfiguration:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

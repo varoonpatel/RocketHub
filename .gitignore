@@ -19,3 +19,5 @@ Icon
 RocketHub/RocketHub.xcodeproj/project.xcworkspace/xcuserdata/varun.xcuserdatad/UserInterfaceState.xcuserstate
 RocketHub/RocketHub.xcodeproj/xcuserdata/varun.xcuserdatad/xcschemes/xcschememanagement.plist
 RocketHub/RocketHub.xcodeproj/project.xcworkspace/xcuserdata/varun.xcuserdatad/UserInterfaceState.xcuserstate
+RocketHub/BuildTools/.build
+RocketHub/BuildTools/.swiftpm
