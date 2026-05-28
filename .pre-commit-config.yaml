@@ -1,4 +1,14 @@
 repos:
+  - repo: local
+    hooks:
+      - id: swiftformat
+        name: SwiftFormat
+        entry: swift run -c release --package-path RocketHub/BuildTools swiftformat RocketHub Modules/Sources --lint --config .swiftformat
+        language: system
+        pass_filenames: false
+        types:
+          - swift
+
   - repo: https://github.com/realm/SwiftLint
     rev: 0.57.1
     hooks:
