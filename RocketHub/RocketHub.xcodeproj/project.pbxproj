@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B94F61D2FCB7C0E00C0C002 /* LoginFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 8B94F61C2FCB7C0E00C0C002 /* LoginFeature */; };
+		8B94F61F2FCB7C1200C0C002 /* LoginDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 8B94F61E2FCB7C1200C0C002 /* LoginDomain */; };
+		8B94F6212FCB7C1600C0C002 /* LoginData in Frameworks */ = {isa = PBXBuildFile; productRef = 8B94F6202FCB7C1600C0C002 /* LoginData */; };
+		8B94F6572FCCD38600C0C002 /* GraphQLClientTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 8B94F6562FCCD38600C0C002 /* GraphQLClientTestSupport */; };
+		8B94F6592FCD0BA000C0C002 /* RocketHubTestPlan.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 8B94F6582FCD0BA000C0C002 /* RocketHubTestPlan.xctestplan */; };
+		8B94F65B2FCDBE8500C0C002 /* CommonTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 8B94F65A2FCDBE8500C0C002 /* CommonTestSupport */; };
 		8BC1A7BB2FC4DA62002F6189 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 8BC1A7BA2FC4DA62002F6189 /* Common */; };
 		8BC1A7BF2FC4DA62002F6189 /* GraphQLClient in Frameworks */ = {isa = PBXBuildFile; productRef = 8BC1A7BE2FC4DA62002F6189 /* GraphQLClient */; };
 /* End PBXBuildFile section */
@@ -29,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B94F6582FCD0BA000C0C002 /* RocketHubTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RocketHubTestPlan.xctestplan; sourceTree = "<group>"; };
 		8BC1A7732FC38D1F002F6189 /* RocketHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC1A7802FC38D20002F6189 /* RocketHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocketHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC1A78A2FC38D20002F6189 /* RocketHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocketHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,8 +65,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B94F65B2FCDBE8500C0C002 /* CommonTestSupport in Frameworks */,
+				8B94F61F2FCB7C1200C0C002 /* LoginDomain in Frameworks */,
+				8B94F6572FCCD38600C0C002 /* GraphQLClientTestSupport in Frameworks */,
+				8B94F61D2FCB7C0E00C0C002 /* LoginFeature in Frameworks */,
 				8BC1A7BB2FC4DA62002F6189 /* Common in Frameworks */,
 				8BC1A7BF2FC4DA62002F6189 /* GraphQLClient in Frameworks */,
+				8B94F6212FCB7C1600C0C002 /* LoginData in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +95,7 @@
 		8BC1A76A2FC38D1F002F6189 = {
 			isa = PBXGroup;
 			children = (
+				8B94F6582FCD0BA000C0C002 /* RocketHubTestPlan.xctestplan */,
 				8BC1A7A92FC3914B002F6189 /* Modules */,
 				8BC1A7752FC38D1F002F6189 /* RocketHub */,
 				8BC1A7832FC38D20002F6189 /* RocketHubTests */,
@@ -132,6 +145,11 @@
 			packageProductDependencies = (
 				8BC1A7BA2FC4DA62002F6189 /* Common */,
 				8BC1A7BE2FC4DA62002F6189 /* GraphQLClient */,
+				8B94F61C2FCB7C0E00C0C002 /* LoginFeature */,
+				8B94F61E2FCB7C1200C0C002 /* LoginDomain */,
+				8B94F6202FCB7C1600C0C002 /* LoginData */,
+				8B94F6562FCCD38600C0C002 /* GraphQLClientTestSupport */,
+				8B94F65A2FCDBE8500C0C002 /* CommonTestSupport */,
 			);
 			productName = RocketHub;
 			productReference = 8BC1A7732FC38D1F002F6189 /* RocketHub.app */;
@@ -232,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B94F6592FCD0BA000C0C002 /* RocketHubTestPlan.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +680,26 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8B94F61C2FCB7C0E00C0C002 /* LoginFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LoginFeature;
+		};
+		8B94F61E2FCB7C1200C0C002 /* LoginDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LoginDomain;
+		};
+		8B94F6202FCB7C1600C0C002 /* LoginData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LoginData;
+		};
+		8B94F6562FCCD38600C0C002 /* GraphQLClientTestSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GraphQLClientTestSupport;
+		};
+		8B94F65A2FCDBE8500C0C002 /* CommonTestSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonTestSupport;
+		};
 		8BC1A7BA2FC4DA62002F6189 /* Common */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Common;

@@ -6,19 +6,36 @@
 //
 
 import Common
+import CommonTestSupport
 import FactoryKit
 import Foundation
 import GraphQLClient
+import GraphQLClientTestSupport
+import LoginData
 
 extension Container: @retroactive AutoRegistering {
     public func autoRegister() {
         graphQLClient.register {
             let url = URL(string: String("https://apollo-fullstack-tutorial.herokuapp.com/graphql"))
             return DefaultGraphQLClient(url: url)
+        }.onTest { _ in
+            MockGraphQLClient()
         }
 
         logger.register {
             AppLogger()
+        }
+
+        loginRepository.register {
+            GraphQLLoginRepository()
+        }.onTest { _ in
+            GraphQLLoginRepository()
+        }
+
+        sharedStorage.register {
+            SharedStgorage()
+        }.onTest { _ in
+            MockSharedStgorage()
         }
     }
 }

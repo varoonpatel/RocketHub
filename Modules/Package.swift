@@ -13,13 +13,41 @@ let package = Package(
             targets: ["Common"]
         ),
         .library(
+            name: "CommonTestSupport",
+            targets: ["CommonTestSupport"]
+        ),
+        .library(
             name: "GraphQLClient",
             targets: ["GraphQLClient"]
+        ),
+        .library(
+            name: "GraphQLClientTestSupport",
+            targets: ["GraphQLClientTestSupport"]
         ),
         .library(
             name: "RocketAPI",
             targets: ["RocketAPI"]
         ),
+        .library(
+            name: "LoginFeature",
+            targets: ["LoginFeature"]
+        ),
+        .library(
+            name: "LoginFeatureTests",
+            targets: ["LoginFeatureTests"]
+        ),
+        .library(
+            name: "LoginDomain",
+            targets: ["LoginDomain"]
+        ),
+        .library(
+            name: "LoginData",
+            targets: ["LoginData"]
+        ),
+        .library(
+            name: "LoginDataTests",
+            targets: ["LoginDataTests"]
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/hmlongco/Factory", from: "3.0.4"),
@@ -32,6 +60,12 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "Common",
+            dependencies: [
+                .product(name: "FactoryKit", package: "Factory"),
+            ]
+        ),
+        .target(
+            name: "CommonTestSupport"
         ),
         .target(
             name: "GraphQLClient",
@@ -42,12 +76,56 @@ let package = Package(
             ]
         ),
         .target(
+            name: "GraphQLClientTestSupport",
+            dependencies: [
+                "GraphQLClient",
+                .product(name: "Apollo", package: "apollo-ios"),
+            ]
+        ),
+        .target(
             name: "RocketAPI",
             dependencies: [
                 .product(name: "Apollo", package: "apollo-ios"),
             ],
             path: "Sources/RocketAPI/Generated"
-        )
+        ),
+        .target(
+            name: "LoginFeature",
+            dependencies: [
+                "Common",
+                "LoginDomain",
+                .product(name: "FactoryKit", package: "Factory"),
+            ]
+        ),
+        .testTarget(
+            name: "LoginFeatureTests",
+            dependencies: [
+                "LoginFeature",
+                "CommonTestSupport",
+                .product(name: "FactoryTesting", package: "Factory"),
+            ]
+        ),
+        .target(
+            name: "LoginDomain"
+        ),
+        .target(
+            name: "LoginData",
+            dependencies: [
+                "LoginDomain",
+                "GraphQLClient",
+                .product(name: "FactoryKit", package: "Factory"),
+            ]
+        ),
+        .testTarget(
+            name: "LoginDataTests",
+            dependencies: [
+                "LoginData",
+                "LoginDomain",
+                "GraphQLClient",
+                "GraphQLClientTestSupport",
+                .product(name: "FactoryTesting", package: "Factory"),
+            ]
+        ),
     ],
     swiftLanguageModes: [.v6]
 )
