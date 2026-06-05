@@ -14,9 +14,11 @@
       }
     },
     "schemaTypes" : {
-      "path" : "./RocketAPI",
+      "path" : "./Generated",
       "moduleType" : {
-        "swiftPackage" : {
+        "embeddedInTarget" : {
+          "name" : "RocketAPI",
+          "accessModifier" : "public"
         }
       }
     },

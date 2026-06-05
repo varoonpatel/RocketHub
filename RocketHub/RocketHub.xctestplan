@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "48D569A4-4433-4F1F-9720-DC2DA8AEE3D3",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:RocketHub.xcodeproj",
+      "identifier" : "8BC1A7722FC38D1F002F6189",
+      "name" : "RocketHub"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..\/Modules",
+        "identifier" : "LoginFeatureTests",
+        "name" : "LoginFeatureTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/Modules",
+        "identifier" : "LoginDataTests",
+        "name" : "LoginDataTests"
+      }
+    }
+  ],
+  "version" : 1
+}

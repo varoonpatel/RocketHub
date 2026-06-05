@@ -3,7 +3,7 @@
 
 import ApolloAPI
 
-public extension Objects {
+public extension RocketAPI.Objects {
   nonisolated static let User = ApolloAPI.Object(
     typename: "User",
     implementedInterfaces: [],

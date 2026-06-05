@@ -8,8 +8,12 @@ on:
       - develop
 
 jobs:
-  quality:
+  swift-quality:
     runs-on: macos-latest
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: 1
+      HOMEBREW_NO_INSTALL_CLEANUP: 1
+      PRE_COMMIT_HOME: ${{ github.workspace }}/.cache/pre-commit
 
     steps:
       - name: Checkout
@@ -20,14 +24,29 @@ jobs:
         with:
           xcode-version: latest-stable
 
-      - name: Install SwiftLint
-        run: brew install swiftlint
+      - name: Cache pre-commit
+        uses: actions/cache@v4
+        with:
+          path: .cache/pre-commit
+          key: ${{ runner.os }}-pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pre-commit-
 
-      - name: Install SwiftFormat
-        run: brew install swiftformat
+      - name: Cache SwiftPM BuildTools
+        uses: actions/cache@v4
+        with:
+          path: |
+            RocketHub/BuildTools/.build
+            ~/Library/Caches/org.swift.swiftpm
+          key: ${{ runner.os }}-swiftpm-buildtools-${{ hashFiles('RocketHub/BuildTools/Package.swift', 'RocketHub/BuildTools/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-swiftpm-buildtools-
 
-      - name: Run SwiftFormat
-        run: swiftformat . --lint --config .swiftformat
+      - name: Install pre-commit
+        run: |
+          if ! command -v pre-commit >/dev/null; then
+            brew install pre-commit
+          fi
 
-      - name: Run SwiftLint
-        run: swiftlint --config RocketHub/.swiftlint.yml --force-exclude
+      - name: Run quality checks
+        run: pre-commit run --all-files
