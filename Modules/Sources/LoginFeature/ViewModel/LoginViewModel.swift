@@ -19,6 +19,11 @@ public final class LoginViewModel {
     @AppStorage("isLoggedIn", store: Container.shared.sharedStorage()) var isLoggedIn = false
 
     var email: String = ""
+    @ObservationIgnored
+    var errorMessage: String = ""
+    @ObservationIgnored
+    var showAlert: Bool = false
+
     var isValidEmail: Bool {
         let regex = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"#
 
@@ -31,7 +36,13 @@ public final class LoginViewModel {
     public init() {}
 
     public func login() async {
-        try? await loginRepository.login(email: email)
-        isLoggedIn = true
+        do {
+            try await loginRepository.login(email: email)
+            isLoggedIn = true
+        } catch {
+            isLoggedIn = false
+            errorMessage = "Something went wrong, Please try later."
+            showAlert = true
+        }
     }
 }

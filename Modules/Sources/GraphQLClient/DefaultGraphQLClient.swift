@@ -9,14 +9,14 @@ import Apollo
 import Foundation
 import RocketAPI
 
-public final class DefaultGraphQLClient: GraphQLClient {
+public actor DefaultGraphQLClient: GraphQLClient {
     let apolloClient: ApolloClient
 
     public init(apolloClient: ApolloClient) {
         self.apolloClient = apolloClient
     }
 
-    public convenience init(url: URL?) {
+    public init(url: URL?) {
         guard let url else {
             fatalError("GraphQL Server URL is nil")
         }

@@ -11,7 +11,7 @@ import GraphQLClient
 import LoginDomain
 import RocketAPI
 
-public final class GraphQLLoginRepository: LoginRepository {
+public actor GraphQLLoginRepository: LoginRepository {
     private let graphqlClient: GraphQLClient = dependency(\.graphQLClient)
 
     public init() {}

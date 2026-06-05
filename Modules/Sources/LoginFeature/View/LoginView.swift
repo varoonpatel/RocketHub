@@ -40,8 +40,21 @@ public struct LoginView: View {
             .background(viewModel.isValidEmail ? Color.blue : .gray)
             .cornerRadius(8)
         }
-
         .padding(.horizontal, 20)
+        .alert(viewModel.errorMessage, isPresented: $viewModel.showAlert) {}
+    }
+}
+
+public struct ErrorBannerView: View {
+    @Binding var errorMessage: String
+    public var body: some View {
+        HStack {
+            Text(errorMessage)
+                .font(.title3)
+                .foregroundStyle(.white)
+        }
+        .frame(maxWidth: .infinity, maxHeight: 50)
+        .background(Color.red)
     }
 }
 

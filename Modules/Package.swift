@@ -33,10 +33,6 @@ let package = Package(
             targets: ["LoginFeature"]
         ),
         .library(
-            name: "LoginFeatureTests",
-            targets: ["LoginFeatureTests"]
-        ),
-        .library(
             name: "LoginDomain",
             targets: ["LoginDomain"]
         ),
@@ -44,10 +40,6 @@ let package = Package(
             name: "LoginData",
             targets: ["LoginData"]
         ),
-        .library(
-            name: "LoginDataTests",
-            targets: ["LoginDataTests"]
-        )
     ],
     dependencies: [
         .package(url: "https://github.com/hmlongco/Factory", from: "3.0.4"),
