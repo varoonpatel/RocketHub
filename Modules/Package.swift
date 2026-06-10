@@ -40,6 +40,18 @@ let package = Package(
             name: "LoginData",
             targets: ["LoginData"]
         ),
+        .library(
+            name: "HomeFeature",
+            targets: ["HomeFeature"]
+        ),
+        .library(
+            name: "HomeDomain",
+            targets: ["HomeDomain"]
+        ),
+        .library(
+            name: "HomeData",
+            targets: ["HomeData"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/hmlongco/Factory", from: "3.0.4"),
@@ -116,6 +128,28 @@ let package = Package(
                 "GraphQLClient",
                 "GraphQLClientTestSupport",
                 .product(name: "FactoryTesting", package: "Factory"),
+            ]
+        ),
+        .target(
+            name: "HomeFeature",
+            dependencies: [
+                "HomeDomain",
+                .product(name: "FactoryKit", package: "Factory")
+            ]
+        ),
+        .target(
+            name: "HomeDomain",
+            dependencies: [
+                .product(name: "FactoryKit", package: "Factory")
+            ]
+        ),
+        .target(
+            name: "HomeData",
+            dependencies: [
+                "HomeDomain",
+                "GraphQLClient",
+                "RocketAPI",
+                .product(name: "FactoryKit", package: "Factory"),
             ]
         ),
     ],

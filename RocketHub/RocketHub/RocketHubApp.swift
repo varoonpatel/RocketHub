@@ -6,6 +6,7 @@
 //
 
 import Common
+import HomeFeature
 import LoginFeature
 import SwiftUI
 
@@ -16,7 +17,18 @@ struct RocketHubApp: App {
     var body: some Scene {
         WindowGroup {
             if isLoggedIn {
-                ContentView()
+                TabView {
+                    Tab("Home", systemImage: "house.fill") {
+                        NavigationStack {
+                            LaunchesListView()
+                        }
+                    }
+
+                    Tab("My Trips", systemImage: "airplane") {
+                        ContentView()
+                    }
+                }
+                .tabViewStyle(.tabBarOnly)
             } else {
                 LoginView()
             }

@@ -1,0 +1,22 @@
+query Launches($pageSize: Int, $cursor: String) {
+  launches(
+    pageSize: $pageSize,
+    after: $cursor
+  ) {
+    cursor
+    hasMore
+    launches {
+      id
+      isBooked
+      mission {
+        name
+        missionPatch
+      }
+      rocket {
+        name
+        type
+      }
+      site
+    }
+  }
+}

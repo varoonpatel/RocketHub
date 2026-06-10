@@ -11,6 +11,8 @@ import FactoryKit
 import Foundation
 import GraphQLClient
 import GraphQLClientTestSupport
+import HomeData
+import HomeDomain
 import LoginData
 
 extension Container: @retroactive AutoRegistering {
@@ -36,6 +38,10 @@ extension Container: @retroactive AutoRegistering {
             SharedStgorage()
         }.onTest { _ in
             MockSharedStgorage()
+        }
+
+        launchesRepository.register {
+            GraphQLLaunchesRepository()
         }
     }
 }

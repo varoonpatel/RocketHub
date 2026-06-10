@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B03A8912FD4A90100DE3CF9 /* HomeFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 8B03A8902FD4A90100DE3CF9 /* HomeFeature */; };
+		8B03A8932FD88B8F00DE3CF9 /* HomeData in Frameworks */ = {isa = PBXBuildFile; productRef = 8B03A8922FD88B8F00DE3CF9 /* HomeData */; };
 		8B94F61D2FCB7C0E00C0C002 /* LoginFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 8B94F61C2FCB7C0E00C0C002 /* LoginFeature */; };
 		8B94F61F2FCB7C1200C0C002 /* LoginDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 8B94F61E2FCB7C1200C0C002 /* LoginDomain */; };
 		8B94F6212FCB7C1600C0C002 /* LoginData in Frameworks */ = {isa = PBXBuildFile; productRef = 8B94F6202FCB7C1600C0C002 /* LoginData */; };
@@ -34,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8B03A86A2FD264CB00DE3CF9 /* RocketHub.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = RocketHub.xctestplan; sourceTree = "<group>"; };
+		8B03A86A2FD264CB00DE3CF9 /* RocketHub.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RocketHub.xctestplan; sourceTree = "<group>"; };
 		8BC1A7732FC38D1F002F6189 /* RocketHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC1A7802FC38D20002F6189 /* RocketHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocketHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC1A78A2FC38D20002F6189 /* RocketHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocketHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,12 +66,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B03A8912FD4A90100DE3CF9 /* HomeFeature in Frameworks */,
 				8B94F65B2FCDBE8500C0C002 /* CommonTestSupport in Frameworks */,
 				8B94F61F2FCB7C1200C0C002 /* LoginDomain in Frameworks */,
 				8B94F6572FCCD38600C0C002 /* GraphQLClientTestSupport in Frameworks */,
 				8B94F61D2FCB7C0E00C0C002 /* LoginFeature in Frameworks */,
 				8BC1A7BB2FC4DA62002F6189 /* Common in Frameworks */,
 				8BC1A7BF2FC4DA62002F6189 /* GraphQLClient in Frameworks */,
+				8B03A8932FD88B8F00DE3CF9 /* HomeData in Frameworks */,
 				8B94F6212FCB7C1600C0C002 /* LoginData in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +153,8 @@
 				8B94F6202FCB7C1600C0C002 /* LoginData */,
 				8B94F6562FCCD38600C0C002 /* GraphQLClientTestSupport */,
 				8B94F65A2FCDBE8500C0C002 /* CommonTestSupport */,
+				8B03A8902FD4A90100DE3CF9 /* HomeFeature */,
+				8B03A8922FD88B8F00DE3CF9 /* HomeData */,
 			);
 			productName = RocketHub;
 			productReference = 8BC1A7732FC38D1F002F6189 /* RocketHub.app */;
@@ -678,6 +684,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8B03A8902FD4A90100DE3CF9 /* HomeFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeFeature;
+		};
+		8B03A8922FD88B8F00DE3CF9 /* HomeData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HomeData;
+		};
 		8B94F61C2FCB7C0E00C0C002 /* LoginFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LoginFeature;

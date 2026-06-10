@@ -28,7 +28,12 @@ public extension RocketAPI {
     public static let configuration: any ApolloAPI.SchemaConfiguration.Type = SchemaConfiguration.self
 
     private static let objectTypeMap: [String: ApolloAPI.Object] = [
+      "Launch": RocketAPI.Objects.Launch,
+      "LaunchConnection": RocketAPI.Objects.LaunchConnection,
+      "Mission": RocketAPI.Objects.Mission,
       "Mutation": RocketAPI.Objects.Mutation,
+      "Query": RocketAPI.Objects.Query,
+      "Rocket": RocketAPI.Objects.Rocket,
       "User": RocketAPI.Objects.User
     ]
 

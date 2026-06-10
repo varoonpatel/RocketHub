@@ -1,5 +1,5 @@
 {
-  "originHash" : "3465f4165f37f4b7470b125ae9a1ee08e54cdf08ed91555f51621aaa6c78247d",
+  "originHash" : "0dd43b53aee5f97ef3a7f1b577c9eaa22c5f5b758def13da87a9edf929add799",
   "pins" : [
     {
       "identity" : "apollo-ios",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/hmlongco/Factory",
       "state" : {
-        "revision" : "8c1c080cdf74188dd6aaa36d8d13206bb465f8f1",
-        "version" : "3.0.4"
+        "revision" : "b32dc7a813c2da6b3c3618df12534b1d85c6aa78",
+        "version" : "3.0.5"
       }
     },
     {
