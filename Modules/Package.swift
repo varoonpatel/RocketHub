@@ -110,7 +110,10 @@ let package = Package(
             ]
         ),
         .target(
-            name: "LoginDomain"
+            name: "LoginDomain",
+            dependencies: [
+                .product(name: "FactoryKit", package: "Factory"),
+            ]
         ),
         .target(
             name: "LoginData",

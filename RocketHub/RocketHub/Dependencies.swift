@@ -14,6 +14,7 @@ import GraphQLClientTestSupport
 import HomeData
 import HomeDomain
 import LoginData
+import LoginDomain
 
 extension Container: @retroactive AutoRegistering {
     public func autoRegister() {

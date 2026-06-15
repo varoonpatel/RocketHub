@@ -6,7 +6,6 @@
 //
 
 import FactoryKit
-import LoginDomain
 
 public extension Container {
     var loginRepository: Factory<LoginRepository> {
